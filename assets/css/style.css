@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    body {
+        @apply bg-[#0e0e0e] text-white;
+        font-family: "Tektur", sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-0 sm:w-2;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-[#202020];
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-blue-300;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-blue-400;
+    }
+
+    .hypertext {
+        @apply text-blue-300 transition duration-300 ease-in-out hover:bg-blue-300 hover:text-[#0e0e0e];
+    }
+
+    .button {
+        @apply rounded-3xl border border-transparent bg-blue-300 py-2 px-5 font-bold text-[#0e0e0e] transition duration-300 ease-in-out hover:border-blue-300 hover:bg-[#202020] hover:text-blue-300;
+    }
+
+    .hiddenArrow {
+        @apply cursor-default opacity-0;
+        transition: height 0ms 400ms, opacity 400ms 0ms;
+    }
+
+    .activeArrow {
+        @apply cursor-pointer opacity-100;
+        transition: height 0ms 0ms, opacity 600ms 0ms;
+    }
+
+    .navbarTop {
+        @apply mx-auto flex items-center justify-between px-5 py-7 transition-all duration-300 ease-in-out md:p-12;
+    }
+
+    .navbarTop img {
+        @apply ml-1 w-11 cursor-pointer md:w-20;
+    }
+
+    .navbarTop .burger {
+        @apply md:scale-[1.3];
+    }
+
+    .navbarScroll {
+        @apply mx-auto flex items-center justify-between bg-[#0e0e0e] px-5 py-2 transition-all duration-300 ease-in-out md:bg-[#202020] md:px-12;
+    }
+
+    .navbarScroll img {
+        @apply ml-1 w-11 cursor-pointer;
+    }
+
+    .navbarScroll .burger {
+        @apply md:scale-100;
+    }
+
+    form input[type="text"] {
+        @apply rounded-full bg-transparent placeholder:text-gray-500 focus:outline-none;
+    }
+
+    form .input-default {
+        @apply border border-white;
+    }
+
+    form .input-error {
+        @apply border border-red-500;
+    }
+
+    form input[type="text"] {
+        @apply h-[50px] w-[330px] border px-5 text-sm;
+    }
+
+    form input[type="text"] {
+        @apply border sm:h-[65px] sm:w-[500px] sm:px-7 sm:text-xl;
+    }
+
+    form input[type="text"] {
+        @apply border-2 md:h-[70px] md:w-[650px] md:px-8 md:text-2xl;
+    }
+
+    form input[type="text"] {
+        @apply border-2 lg:h-[80px] lg:w-[850px] lg:px-8 lg:text-3xl;
+    }
+
+    form input[type="text"] {
+        @apply border-2 xl:h-[100px] xl:w-[1000px] xl:px-10 xl:text-4xl;
+    }
+
+    form textarea {
+        @apply max-h-[350px] rounded-3xl border border-white bg-transparent placeholder:text-gray-500 focus:outline-none;
+    }
+
+    form textarea {
+        @apply w-[330px] border py-2 px-4 text-base placeholder:text-lg;
+    }
+
+    form textarea {
+        @apply border text-lg sm:w-[500px] sm:py-4 sm:px-5;
+    }
+
+    form textarea {
+        @apply border-2 md:w-[650px] md:py-5 md:px-6 md:text-lg md:placeholder:text-xl;
+    }
+
+    form textarea {
+        @apply border-2 lg:w-[850px] lg:py-5 lg:px-6 lg:text-xl lg:placeholder:text-2xl;
+    }
+
+    form textarea {
+        @apply border-2 xl:w-[1000px] xl:py-5 xl:px-7 xl:text-2xl xl:placeholder:text-4xl;
+    }
+
+    form .resume {
+        @apply my-10 grid w-[330px] grid-cols-1 gap-5 sm:w-[500px] md:w-[650px] lg:w-[850px] lg:grid-cols-2 xl:w-[1000px];
+    }
+
+    form .resume p {
+        @apply w-full bg-[#202020] p-3 text-center;
+    }
+
+    form .resume div {
+        @apply w-full bg-[#202020] p-3 text-left;
+    }
+
+    .section {
+        @apply flex flex-col gap-8;
+    }
+
+    .section .card {
+        @apply bg-[#202020] p-5;
+    }
+
+    .section .title {
+        @apply text-lg font-bold md:text-xl;
+    }
+
+    .section .date {
+        @apply mt-1 bg-[#4b4b4b] px-1.5 py-0.5 text-xs italic;
+    }
+
+    .section .skill {
+        @apply mt-1 bg-[#3b3b3b] px-1.5 py-1 text-xs mr-1;
+    }
+
+    .section .infos {
+        @apply space-y-4;
+    }
+
+    .section .desc {
+        @apply mt-4 text-sm mb-2;
+    }
+
+    .section .add {
+        @apply text-xs font-bold md:text-sm;
+    }
+
+    #project-markdown {
+        @apply mt-16 md:mt-28;
+    }
+
+    #project-markdown #hero {
+        @apply space-y-4 text-center;
+    }
+
+    #project-markdown #hero h1 {
+        @apply text-xl font-bold md:text-4xl;
+    }
+
+    #project-markdown #hero .type {
+        @apply text-lg text-blue-300 md:text-2xl;
+    }
+
+    #project-markdown #hero .techno {
+        @apply text-sm font-light;
+    }
+
+    #project-markdown #hero a {
+        @apply button;
+    }
+
+    #project-markdown #content {
+        @apply container my-10 mx-auto px-5 md:my-12;
+    }
+
+    #project-markdown #content {
+        @apply space-y-10;
+    }
+
+    #project-markdown #content h2 {
+        @apply pt-10 text-2xl font-bold text-blue-300 md:text-4xl;
+    }
+
+    #project-markdown #content ul {
+        @apply ml-5 md:ml-10;
+    }
+
+    #project-markdown #content ul {
+        @apply space-y-4;
+    }
+
+    #project-markdown #content ul li:first-child {
+        @apply -mt-5;
+    }
+
+    #project-markdown #content ul li:before {
+        @apply mr-0.5;
+        content: "• ";
+    }
+
+    #project-markdown #content a {
+        @apply hypertext;
+    }
+
+    #project-markdown #content img {
+        @apply mx-auto mb-10 w-full md:w-1/2;
+    }
+}
