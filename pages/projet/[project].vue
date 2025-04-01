@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute()
 
-const { data: project } = await useAsyncData(() => queryContent("проект").where({ _path: route.fullPath }).findOne())
+const { data: project } = await useAsyncData(() => queryContent("projet").where({ _path: route.fullPath }).findOne())
 
 useSeoMeta({
     title: project.value.title,
@@ -10,8 +10,6 @@ useSeoMeta({
     description: project.value.description,
     ogDescription: project.value.description,
     twitterDescription: project.value.description,
-    ogImage: `https://www.martialescudero.com/content/${project.value.card}`,
-    twitterImage: `https://www.martialescudero.com/content/${project.value.card}`
 })
 </script>
 
