@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+import tailwindcssAnimate from "tailwindcss-animate";
+
+export default {
     content: [
         "components/**/*.{vue,js}",
         "layouts/**/*.vue",
@@ -7,9 +9,10 @@ module.exports = {
         "composables/**/*.{js,ts}",
         "plugins/**/*.{js,ts}",
         "App.{js,ts,vue}",
-        "app.{js,ts,vue}"
+        "app.{js,ts,vue}",
+        './nuxt.config.{js,ts}'
     ],
     plugins: [
-        require("tailwindcss-animate")
+        tailwindcssAnimate
     ]
-}
+};
