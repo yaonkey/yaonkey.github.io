@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /contact
+Disallow: /cv
+Disallow: /labo
+Disallow: /portfolio
+Disallow: /projet/
+Sitemap: https://www.martialescudero.com/sitemap.xml
